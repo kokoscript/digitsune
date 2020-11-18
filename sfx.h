@@ -102,16 +102,6 @@ void happyChirp() {
   CircuitPlayground.playTone(7000, 25);
 }
 
-void sadChirp() {
-  CircuitPlayground.playTone(1500, 25);
-  CircuitPlayground.playTone(3500, 25);
-  CircuitPlayground.playTone(5500, 25);
-  delay(125);
-  CircuitPlayground.playTone(500, 25);
-  CircuitPlayground.playTone(2500, 25);
-  CircuitPlayground.playTone(4500, 25);
-}
-
 void errChirp() {
   CircuitPlayground.playTone(500, 15);
   CircuitPlayground.playTone(2500, 15);
@@ -139,6 +129,14 @@ void sighOut() {
   for(int i = 30; i > 0; i--){
     CircuitPlayground.playTone(600 + (i*16), 8);
   }
+}
+
+void ynSnd1() {
+  CircuitPlayground.playTone(500, 80);
+}
+
+void ynSnd2() {
+  CircuitPlayground.playTone(1000, 80);
 }
 
 void sng1() {

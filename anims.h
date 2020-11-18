@@ -170,3 +170,76 @@ void emotePensive() {
     }
   }
 }
+
+void emoteYes() {
+  mode = DISP_MODE_EMOTEYES;
+  for(int i = 0; i < 13; i++){
+    switch(i){
+      case 0:
+      case 4:
+      case 8:
+      case 12:
+        display_bitmap(1);
+        if(i == 0 || i == 4 || i == 8) ynSnd1();
+        break;
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 9:
+      case 11:
+        display_bitmap_delay(26, 80);
+        break;
+      case 2:
+      case 6:
+      case 10:
+        display_bitmap(27);
+        ynSnd2();
+        break;
+      default:
+        display_bitmap_delay(0, 100);
+        break;
+    }
+  }
+}
+
+
+void emoteNo() {
+  mode = DISP_MODE_EMOTENO;
+  for(int i = 0; i < 17; i++){
+    switch(i){
+      case 0:
+      case 4:
+      case 8:
+      case 12:
+      case 16:
+        display_bitmap_delay(30, 50);
+        break;
+      case 1:
+      case 3:
+      case 9:
+      case 11:
+        display_bitmap_delay(29, 50);
+        break;
+      case 2:
+      case 10:
+        display_bitmap(28);
+        ynSnd2();
+        break;
+      case 5:
+      case 7:
+      case 13:
+      case 15:
+        display_bitmap_delay(31, 50);
+        break;
+      case 6:
+      case 14:
+        display_bitmap_delay(32, 50);
+        ynSnd1();
+        break;
+      default:
+        display_bitmap_delay(0, 100);
+        break;
+    }
+  }
+}
